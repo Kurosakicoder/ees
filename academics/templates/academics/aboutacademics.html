@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% block body %}
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+        <div class="container">
+            <div class="banner_content text-center">
+                <h2>About Academics</h2>
+                <div class="page_link">
+                    <a href="/">Home</a>
+                    <a href="{% url 'academics:aboutacademics' %}">About Academics</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#school">School Terms</a>
+        </li>
+        <li class="nav-item"></li>
+            <a class="nav-link" href="#awards">Awards & Scholarships</a>
+        <li class="nav-item">
+            <a class="nav-link" href="#discipline">Disciplinary Rules</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#exam">Examination & Promotion</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#leave">Leave of Absence</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#certificate">Certificate</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#notes">Notes to Parents/Guardians</a>
+        </li>
+    </ul>
+  </nav>
+</div>  
+
+<br>
+<div class="container" id="school">
+<div class="card " >
+    <h2 class="card-header alert-primary text-center">School Terms</h2>
+    <div class="card-body">
+      <!-- <h5 class="card-title"></h5> -->
+      <p class="card-text text-justify">{{aboutacademics.school_terms|safe|escape}}</p>
+      <a href="{{aboutacademics.school_pdf_calender.url}}" class="btn btn-primary" target="_blank">Go To School Academic Calender</a>
+    </div>
+  </div>
+</div> 
+<br>
+<div class="container" id="awards">
+  <div class="card " >
+    <h2 class="card-header alert-info text-center">Awards & Scholarships</h2>
+    <div class="card-body">
+      <p class="card-text text-justify">{{aboutacademics.awards_scholarships|safe|escape}}</p>
+    </div>
+  </div>
+</div>    
+
+<br>
+<div class="container" id="discipline">
+  <div class="card " >
+    <h2 class="card-header alert-warning text-center">Disciplinary Rules</h2>
+    <div class="card-body">
+      <p class="card-text text-justify">{{aboutacademics.disciplinary_rules|safe|escape}}</p>
+    </div>
+  </div> 
+</div> 
+
+<br>
+<div class="container" id="exam">
+  <div class="card " >
+    <h2 class="card-header alert-success text-center">Examination & Promotion</h2>
+    <div class="card-body">
+      <p class="card-text text-justify">{{aboutacademics.examination_promotion|safe|escape}}</p>
+    </div>
+  </div> 
+</div> 
+  <br>
+<div class="container" id="leave">
+  <div class="card " >
+    <h2 class="card-header alert-danger text-center">Leave of Absence</h2>
+    <div class="card-body">
+      <p class="card-text text-justify">{{aboutacademics.leave_of_absence|safe|escape}}</p>
+    </div>
+  </div> 
+</div> 
+  <br>
+<div class="container" id="certificate">
+  <div class="card " >
+    <h2 class="card-header text-center">Certificate</h2>
+    <div class="card-body">
+      <p class="card-text text-justify">{{aboutacademics.certificate|safe|escape}}</p>
+    </div>
+  </div>
+</div> 
+  <br>
+<div class="container" id="notes">
+  <div class="card " >
+    <h2 class="card-header alert-secondary text-center">Notes to Parents/Guardians</h2>
+    <div class="card-body">
+      <p class="card-text text-justify">{{aboutacademics.notes_parents_guardians|safe|escape}}</p>
+    </div>
+  </div>
+</div> 
+
+<br>
+{% endblock body %}

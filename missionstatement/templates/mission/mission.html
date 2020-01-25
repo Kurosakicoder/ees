@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{{ tag|safe }}
+{% block body %}
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+        <div class="container">
+            <div class="banner_content text-center">
+                <h2>Mission Statement</h2>
+                <div class="page_link">
+                    <a href="/">Home</a>
+                    <a href="{% url 'missionstatement:mission' %}">Mission Statement</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="jumbotron">
+    <h1 class="display-4 text-center">Mission Statement</h1>
+   
+  </div>
+
+  <div class="container">
+    <div class="row mx-auto">
+        <table class="table table-hover table-bordered">
+            <thead class="alert alert-success">
+              <tr>
+                <th scope="col"></th>
+                <th scope="col" style="text-align: center;">MISSION STATEMENT</th>
+              </tr>
+            </thead>
+            {% for x in mission %}
+            <tbody>
+                <tr>
+                    <th scope="row" class="mb-0">{{x.id}}</th>
+                    <td class="mb-0"><h4>{{x.paragraph|safe|escape}}</h4></td>
+                  </tr>
+            </tbody>
+            {% endfor %}
+          </table>
+        </div>
+      </div>
+    
+
+
+{% endblock body %}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+        <div class="container">
+            <div class="banner_content text-center">
+                <h2>NCC</h2>
+                <div class="page_link">
+                    <a href="/">Home</a>
+                    <a href="{% url 'ncc:ncc' %}">NCC</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="jumbotron">
+    <h1 class="display-4 text-center">National Cadet Corps (NCC)</h1>
+    <hr class="my-4">
+    <p class="lead text-justify" style="padding-left: 15px; padding-right: 15px;">The School offers NCC for both boys & girls to develop good qualities like
+        good character, discipline, patriotism, secularism, selfless service, courage,
+        comradeship, sportsman spirit, adventure etc. among the children to mould
+        them into useful citizens.</p>
+  </div>
+
+
+<div class="container">
+    <div class="row">
+    {% for x in ncc %}
+    <div class="col-sm">
+        <div class="card" style="width: 20rem; text-align: center;">
+            <img src="{{x.image.url}}" class="card-img-top zoom" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{x.headerline|safe|escape}} - {{x.date}}</h5>
+            <!-- <p class="card-subtitle mb-2 text-muted"></p> -->
+            </div>
+        </div>
+        <br>
+    </div>
+    {% endfor %}
+    </div>
+</div> 
+
+
+
+{% endblock body %}    

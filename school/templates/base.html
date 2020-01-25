@@ -1,0 +1,233 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png">
+        <title>EEHS</title>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/lightbox/simpleLightbox.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/animate-css/animate.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/popup/magnific-popup.css' %}">
+        <!-- main css -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    </head>
+    <body>
+        
+        <!--================Header Menu Area =================-->
+        <header class="header_area">
+           	<div class="top_menu row m0">
+           		<div class="container">
+					<div class="float-left">
+						<ul class="list header_social">
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                            
+                            <li>Welcome, It's <script>
+                                function formatDate(date) {
+                                        var monthNames = [
+                                            "January", "February", "March",
+                                            "April", "May", "June", "July",
+                                            "August", "September", "October",
+                                            "November", "December"
+                                        ];
+
+                                        var dayNames = [
+                                            "Sunday", "Monday", "Tuesday",
+                                            "Wednesday", "Thursday", "Friday", 
+                                            "Saturday", "Sunday"
+                                        ];
+
+                                        var d = new Date();
+                                        var day = date.getDate();
+                                        var monthIndex = date.getMonth();
+                                        var year = date.getFullYear();
+
+                                        return  dayNames[d.getDay()] + ', ' + day + ' ' + monthNames[monthIndex] + ', ' + year;
+                                        }
+                                        document.write(formatDate(new Date()));
+                                        </script></li>
+						</ul>
+					</div>
+					<div class="float-right">
+						<a class="dn_btn" href="tel:+919706001715">+919706001715</a>
+						<a class="dn_btn" href="mailto:eesplp1987@gmail.com">eesplp1987@gmail.com</a>
+					</div>
+           		</div>	
+           	</div>	
+            <div class="main_menu">
+            	<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<a class="navbar-brand logo_h" href="#"><img src="{% static 'img/logo.png' %}" alt=""></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							<ul class="nav navbar-nav menu_nav ml-auto">
+								<li class="nav-item"><a class="nav-link" href="/">Home</a></li> 
+								<li class="nav-item submenu dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+									<ul class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'aboutus:about' %}">About us</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% url 'aboutus:message' %}">Messages</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% url 'aboutus:principal' %}">Principal desk</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% url 'aboutus:vice_principal' %}">Vice-Principal desk</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% url 'aboutus:headmistress' %}">Headmistress desk</a></li>
+									</ul>
+                                </li> 
+                                <li class="nav-item submenu dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Members</a>
+									<ul class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'members:members' %}">Members</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% url 'missionstatement:mission' %}">Mission Statement</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'forcebehind:forcebehind' %}">The Force Behind</a></li> 
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'infrastructure:infrastructure' %}">Infrastructure</a></li>
+                                        
+									</ul>
+                                </li> 
+                                <li class="nav-item"><a class="nav-link" href="{% url 'circular:circular' %}">Circular</a></li>
+                                <li class="nav-item submenu dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Events</a>
+									<ul class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'events:schoolassembly' %}">School Assembly</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% url 'events:trips' %}">Trips & Excursions</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% url 'events:upcomingevents' %}">Upcoming Events</a></li>
+									</ul>
+                                </li> 
+                                <li class="nav-item"><a class="nav-link" href="{% url 'gallery:allCategories' %}">Gallery</a></li>
+                                
+                                <li class="nav-item submenu dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Student</a>
+									<ul class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'studentcouncil:studentcouncil' %}">Student Council</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'achievements:allCategories' %}">Achievements</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'ncc:ncc' %}">NCC</a></li>
+
+									</ul>
+                                </li> 
+                                <li class="nav-item submenu dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Academics</a>
+									<ul class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'academics:aboutacademics' %}">About Academics</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'academics:highschool' %}">High School</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'academics:highersecondaryschool' %}">Higher Secondary</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'academics:schooltiming' %}">School Timing</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'academics:schoolanthem' %}">School Anthem</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'academics:syllabus' %}">Syllabus</a></li>
+									</ul>
+                                </li> 
+                                
+								
+                                <li class="nav-item"><a class="nav-link" href="{% url 'admissions:admissions' %}">Admissions</a></li>
+
+								<li class="nav-item"><a class="nav-link" href="{% url 'contact:contact' %}">Contact</a></li>
+							</ul>
+						</div> 
+					</div>
+            	</nav>
+            </div>
+        </header>
+		<!--================Header Menu Area =================-->
+		
+	
+			{% block body %}
+			{% endblock body %}
+	
+        
+                                        
+        <!--================ start footer Area  =================-->	
+        <footer class="footer-area p_120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3  col-md-6 col-sm-6">
+                        <div class="single-footer-widget tp_widgets">
+                           <h6 class="footer_title">Quick Links</h6>
+                            <ul class="list">
+                            	<li><a href="/">Home</a></li>
+                            	<li><a href="{% url 'aboutus:about' %}">About us</a></li>
+                            	<li><a href="{% url 'members:members' %}">Members</a></li>
+                            	<li><a href="{% url 'studentcouncil:studentcouncil' %}">Student Council</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3  col-md-6 col-sm-6">
+                        <div class="single-footer-widget tp_widgets">
+                           <h6 class="footer_title">All Messages</h6>
+                            <ul class="list">
+                            	<li><a href="{% url 'aboutus:message' %}">Messages</a></li>
+                            	<li><a href="{% url 'aboutus:principal' %}">Principal desk</a></li>
+                            	<li><a href="{% url 'aboutus:vice_principal' %}">Vice-Principal desk</a></li>
+                            	<li><a href="{% url 'aboutus:headmistress' %}">Headmistress desk</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3  col-md-6 col-sm-6">
+                        <div class="single-footer-widget tp_widgets">
+                           <h6 class="footer_title">Events</h6>
+                            <ul class="list">
+                            	<li><a href="{% url 'circular:circular' %}">Circular</a></li>
+                            	<li><a href="{% url 'events:schoolassembly' %}">School Assembly</a></li>
+                            	<li><a href="{% url 'events:trips' %}">Trips & Excursions</a></li>
+                            	<li><a href="{% url 'events:upcomingevents' %}">Upcoming Events</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3  col-md-6 col-sm-6"> 
+                        <div class="single-footer-widget tp_widgets">
+                           <h6 class="footer_title">Contact</h6>
+                            <ul class="list">
+                            	<li><a href="{% url 'contact:contact' %}">Contact Page</a></li>
+                            
+                            </ul>
+                        </div>
+                    </div> 
+
+                </div>
+                <div class="row footer-bottom d-flex justify-content-between align-items-center">
+                    <p class="col-lg-8 col-md-8 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#" target="_blank">Kurosaki</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    <div class="col-lg-4 col-md-4 footer-social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+		<!--================ End footer Area  =================-->
+                
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+        <script src="{% static 'js/popper.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/stellar.js' %}"></script>
+        <script src="{% static 'vendors/lightbox/simpleLightbox.min.js' %}"></script>
+        <script src="{% static 'vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
+        <script src="{% static 'vendors/isotope/imagesloaded.pkgd.min.js' %}"></script>
+        <script src="{% static 'vendors/isotope/isotope.pkgd.min.js' %}"></script>
+        <script src="{% static 'vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'vendors/popup/jquery.magnific-popup.min.js' %}"></script>
+        <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+        <script src="{% static 'vendors/counter-up/jquery.waypoints.min.js' %}"></script>
+        <script src="{% static 'vendors/counter-up/jquery.counterup.js' %}"></script>
+        <script src="{% static 'js/mail-script.js' %}"></script>
+        <script src="{% static 'js/theme.js' %}"></script>
+    </body>
+</html>

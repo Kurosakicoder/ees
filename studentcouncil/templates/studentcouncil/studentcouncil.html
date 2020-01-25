@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+        <div class="container">
+            <div class="banner_content text-center">
+                <h2>Student Council</h2>
+                <div class="page_link">
+                    <a href="/">Home</a>
+                    <a href="{% url 'studentcouncil:studentcouncil' %}">Student Council</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="jumbotron">
+    <h1 class="display-4 text-center">Student Council Members</h1>
+   
+  </div>
+
+
+<section class="about_area p_120">
+    <div class="container">
+        <table class="table table-hover table-bordered">
+            <thead class="thead-dark">
+                <!-- <table class="table table-bordered table-hover">
+                    <thead class="thead-dark"> -->
+            <tr>
+                <th scope="col">Sl No.</th>  
+                <th scope="col">Post</th>
+                <th scope="col">Student Name</th>
+                <th scope="col">Duration</th>
+                
+            </tr>
+            </thead>
+            {% for x in studentcouncil %}
+            <tbody>
+            <tr>
+                <th scope="row">{{x.id}}</th>     
+                <td>{{x.post}}</td>
+                <td>{{x.student_name}}</td>
+                <td>{{x.start_date}} - {{x.end_date}}</td>
+            </tr>
+
+            </tbody>
+            {% endfor %}
+        </table>
+    </div>
+  </section>
+
+
+{% endblock body %}

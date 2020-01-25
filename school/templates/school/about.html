@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+
+{% block body %}
+        <!--================Home Banner Area =================-->
+        <section class="banner_area">
+            <div class="banner_inner d-flex align-items-center">
+            	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+				<div class="container">
+					<div class="banner_content text-center">
+						<h2>About Us</h2>
+						<div class="page_link">
+							<a href="/">Home</a>
+							<a href="{% url 'aboutus:about' %}">About Us</a>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+        <!--================End Home Banner Area =================-->
+		
+		<div class="jumbotron">
+			<h1 class="display-4 text-center">About us</h1>
+		   
+		  </div>
+
+        <!--================About Area =================-->
+        <section class="about_area p_120">
+        	<div class="container">
+        		
+        		<div class="row about_inner">
+        			<div class="col-lg-6">
+						<div class="accordion" id="accordionExample">
+                            <div class="card" >
+                                <img src="{{about.image.url}}" style="flex:1; background-position: center; text-align: center;"class="card-img-bottom" alt="...">
+                                
+							  </div>
+						</div>
+        			</div>
+        			<div class="col-lg-6">
+                        <div class="card" style="flex: 1; ">
+                            <div class="card-body">
+                              <h2 class="card-title text-justify" style="color: black;">{{about.header_school|safe|escape}}</h2>
+                              <br>
+                              <p class="card-text text-justify">{{about.about_school|safe|escape}}</p>
+                            </div>
+                          </div>
+        		
+        			</div>
+        		</div>
+        	    <div class="about_details"> 
+					<div class="bg-white mb-3" style="max-width: 100%;">
+						<div class="card-body">
+						  <p class="card-text text-justify">{{about.first_para|safe|escape}}</p>
+						  <p class="card-text text-justify">{{about.second_para|safe|escape}}</p>
+						</div>
+					  </div>
+        		</div> 
+        	</div>
+        </section>
+       
+        <!--================End About Area =================-->        
+        
+        <!--================Testimonials Area =================-->
+        <hr>
+        <section class="testimonials_area p_120">
+        	<div class="container">
+                <h1 style="color: black; text-align: center;">Testimonials</h1>
+        		<div class="testi_slider owl-carousel">
+                  
+                        <div class="item">
+                            <div class="testi_item">
+                          
+                                <h4>{{about.testimony_name_one}}</h4>
+                                <ul class="list">
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                </ul>
+                                <p>{{about.testimony_details_one|safe|escape}}</p>
+                            </div>
+                        </div>
+                    
+        			<div class="item">
+        				<div class="testi_item">
+						
+       						<h4>{{about.testimony_name_two}}</h4>
+       						<ul class="list">
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       						</ul>
+       						<p>{{about.testimony_details_two|safe|escape}}</p>
+        				</div>
+                    </div>
+        			 <div class="item">
+        				<div class="testi_item">
+						
+       						<h4>{{about.testimony_name_three}}</h4>
+       						<ul class="list">
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       						</ul>
+       						<p>{{about.testimony_details_three|safe|escape}}</p>
+        				</div>
+                    </div> 
+                    
+        		</div>
+        	</div>
+        </section>
+        <!--================End Testimonials Area =================-->
+        
+        <!--================Impress Area =================-->
+        <section class="impress_area p_120">
+        	<div class="container">
+        		<div class="impress_inner text-center">
+					<h2>HAVE ANY QUERIES</h2>
+					<p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station whether that is on the deck</p>
+					<a class="main_btn2" href="{% url 'contact:contact' %}">Contact us</a>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Impress Area =================-->
+{% endblock body %}

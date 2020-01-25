@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+        <div class="container">
+            <div class="banner_content text-center">
+                <h2>Trips & Excursions</h2>
+                <div class="page_link">
+                    <a href="index.html">Home</a>
+                    <a href="about-us.html">Trips & Excursions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="jumbotron jumbotron-fluid">
+
+      <h1 class="display-4" style="text-align: center;">TRIPS & EXCURSIONS</h1>
+  </div>
+
+<!-- <section class="about_area p_120">
+    <div class="container">
+    {% for x in trips %}
+        <div class="card mb-3" style="width: 20rem;">
+            <img src="{{x.image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{x.headerline}} - {{x.date}}</h5>
+            <p class="card-text">{{x.first_para}}</p>
+            <p class="card-text">{{x.second_para}}</p>
+            </div>
+        </div>
+    {% endfor %}
+    </div> 
+</section> -->
+
+<section class="about_area p_120">
+    <div class="container">
+    {% for x in trips %}
+<div class="card mb-3" style="max-width: 100%;">
+    <div class="row no-gutters">
+      <div class="col-md-5">
+        <img src="{{x.image.url}}" class="card-img" alt="...">
+      </div>
+      <div class="col-md-7">
+        <div class="card-body">
+            <h5 class="card-title">{{x.headerline|safe|escape}} - {{x.date}}</h5>
+            <p class="card-text">{{x.first_para|safe|escape}}</p>
+            <p class="card-text">{{x.second_para|safe|escape}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+    </div> 
+</section>
+
+
+{% endblock body %}    

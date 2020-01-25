@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+        <div class="container">
+            <div class="banner_content text-center">
+                <h2>Circular</h2>
+                <div class="page_link">
+                    <a href="/">Home</a>
+                    <a href="{% url 'circular:circular' %}">Circular</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="container-fluid bg-light navbar-fixed-top my_top_navbar_div">
+        {% include 'navbar.html' %}
+    </div>
+    {% if category %}
+<div>
+    <h1 class="text-center my_title">Circular {{category.category_year}}</h1>
+    <hr>
+</div>
+{% else %}
+<br>
+<div>
+    <h1 class="text-center my_title">Circulars</h1>
+   <hr>
+</div>
+{% endif %}
+    <div class="container">
+    <div class="row mx-auto">
+        <table class="table table-hover table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Circular Date</th>
+                <th scope="col">Circular Notice</th>
+                <th scope="col">Circular Details</th>
+              </tr>
+            </thead>
+        {% for circular in circular.object_list %}
+        
+            <tbody>
+              <tr>
+                <th scope="row">{{circular.date}}</th>
+                <td>{{circular.circular_notice|safe|escape}}</td>
+                <td>{{circular.circular_details_two|safe|escape}}</td>
+              </tr>
+       
+  
+            </tbody>
+            {% endfor %}
+          </table>
+       
+    </div>
+    <div class="mx-auto">
+        {% if circular.paginator.num_pages > 1 %}
+        <hr>
+        <div class="text-center">
+            {% for pg in circular.paginator.page_range %}
+                <a href="?page={{pg}}" class="btn btn-light btn-sm {% if circular.number == pg %} active {% endif %}">{{pg}}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    <br>
+</div>
+
+<!-- <section class="about_area p_120">
+    <div class="container">
+        <div class="row">
+            {% for x in circular %}
+            <a href="{{x.category}}">{{x.category}}</a>
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                           {{x.circular_notice}}-{{x.date}}
+                        </button>
+                        </h2>
+                    </div>
+                
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                        {{x.circular_details_two}}
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>    -->
+
+</div>
+
+{% endblock body %}   

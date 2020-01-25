@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+        <div class="container">
+            <div class="banner_content text-center">
+                <h2>School Assembly</h2>
+                <div class="page_link">
+                    <a href="index.html">Home</a>
+                    <a href="about-us.html">School Assembly</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="jumbotron">
+    <h1 class="display-4 text-center">School Assembly</h1>
+   
+  </div>
+
+<section class="about_area p_120">
+    <div class="container">
+        <table class="table table-hover table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Class</th>
+                <th scope="col">Assembly Notice</th>
+            </tr>
+            </thead>
+            {% for x in schoolassembly %}
+            <tbody>
+            <tr>
+                <th scope="row">{{x.date}}</th>
+                <td>{{x.class_students|safe|escape}}</td>
+                <td>{{x.assembly_notice|safe|escape}}</td>
+            </tr>
+
+            </tbody>
+            {% endfor %}
+        </table>
+    </div>
+  </section>
+
+
+
+{% endblock body %}    

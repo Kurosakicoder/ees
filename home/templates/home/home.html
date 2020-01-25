@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<section class="home_banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+        <div class="container">
+            <div class="banner_content text-center">
+                <h2>Welcome to</h2>
+                <h3>Emmanuel English Higher Secondary School</h3>
+				<p>We Ensure better education for a better world</p>
+				<a class="main_btn" href="{% url 'contact:contact' %}">Contact us</a>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<div class="container">
+<marquee width="100%" direction="left" scrollamount="2" style="background-image: linear-gradient(to right, red , blue); ">
+    <p style="color: white;">{{notice.important_notice}}</p>
+</marquee>
+<div class="card">
+    <div class="card-header">
+      School Motto
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>Train up a child in the way he should go, And when he is old he will not depart from it.</p>
+        <footer class="blockquote-footer">Proverbs 22:6 <cite title="Source Title">Bible</cite></footer>
+      </blockquote>
+    </div>
+  </div>
+<br>
+<div class="row about_inner">
+    <div class="col-lg-6">
+        <div class="accordion" id="accordionExample">
+            <div class="card" >
+                <img src="{{about_home.image.url}}" style="flex:1; background-position: center; text-align: center;"class="card-img-top" alt="...">
+                
+              </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card" style="flex: 1; ">
+            <div class="card-body">
+              <h2 class="card-title" style="color: black;">{{about_home.header_school|safe|escape}}</h2>
+              <br>
+              <p class="card-text">{{about_home.about_school|safe|escape}}</p>
+            </div>
+          </div>
+
+    </div>
+</div>
+</div>
+<section class="about_area p_120">
+    <div class="container">
+        <div class="card text-center">
+            <div class="card-header">
+            Upcoming Events
+            </div>
+           {% for x in upcomingevents_home %} 
+                <div class="card-body">
+                    <h4 class="card-title">{{x.headerline|safe|escape}}</h4>
+                    <p class="card-text">{{x.program_notice|safe|escape}}</p>
+                </div>
+                <div class="card-footer text-muted">
+                    Program on {{x.date}}
+                </div>
+            {% endfor%}
+        </div>
+    </div>
+</section> 
+
+<div class="container">
+    <div class="alert alert-warning" role="alert">
+        <!-- <h3>Surveillance:</h3> -->
+        <h3>The school premises is under CCTV Surveillance.</h3>
+    </div>
+</div>
+
+
+
+
+{% endblock body %}
