@@ -3,7 +3,8 @@
 {% block body %}
 <section class="banner_area">
     <div class="banner_inner d-flex align-items-center">
-        <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+        <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="">
+        </div>
         <div class="container">
             <div class="banner_content text-center">
                 <h2>NCC</h2>
@@ -19,30 +20,30 @@
 <div class="jumbotron">
     <h1 class="display-4 text-center">National Cadet Corps (NCC)</h1>
     <hr class="my-4">
-    <p class="lead text-justify" style="padding-left: 15px; padding-right: 15px;">The School offers NCC for both boys & girls to develop good qualities like
+    <p class="lead text-justify" style="padding-left: 15px; padding-right: 15px;">The School offers NCC for both boys &
+        girls to develop good qualities like
         good character, discipline, patriotism, secularism, selfless service, courage,
         comradeship, sportsman spirit, adventure etc. among the children to mould
         them into useful citizens.</p>
-  </div>
+</div>
 
 
 <div class="container">
     <div class="row">
-    {% for x in ncc %}
-    <div class="col-sm">
-        <div class="card" style="width: 20rem; text-align: center;">
-            <img src="{{x.image.url}}" class="card-img-top zoom" alt="...">
-            <div class="card-body">
-            <h5 class="card-title">{{x.headerline|safe|escape}} - {{x.date}}</h5>
-            <!-- <p class="card-subtitle mb-2 text-muted"></p> -->
+        {% for x in ncc %}
+        <div class="col-sm">
+            <div class="card" style="width: 20rem; text-align: center;">
+                <img src="{{x.image.url}}" class="card-img-top zoom" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{x.headerline|safe|escape}} - {{x.date}}</h5>
+                </div>
             </div>
+            <br>
         </div>
-        <br>
+        {% endfor %}
     </div>
-    {% endfor %}
-    </div>
-</div> 
+</div>
 
 
 
-{% endblock body %}    
+{% endblock body %}

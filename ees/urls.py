@@ -21,14 +21,15 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home.urls' , namespace='home')),
+    path('', include('home.urls', namespace='home')),
     path('about/', include('school.urls', namespace='aboutus')),
     path('circular/', include('circular.urls', namespace='circular')),
     path('events/', include('events.urls', namespace='events')),
     path('achievements/', include('achievements.urls', namespace='achievements')),
     path('studentcouncil/', include('studentcouncil.urls', namespace='studentcouncil')),
     path('gallery/', include('gallery.urls', namespace='gallery')),
-    path('missionstatement/', include('missionstatement.urls', namespace='missionstatement')),
+    path('missionstatement/', include('missionstatement.urls',
+                                      namespace='missionstatement')),
     path('forcebehind/', include('forcebehind.urls', namespace='forcebehind')),
     path('members/', include('members.urls', namespace='members')),
     path('infrastructure/', include('infrastructure.urls', namespace='infrastructure')),
@@ -41,6 +42,6 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-admin.site.site_header = "EEHS SCHOOL ADMIN"
-admin.site.site_title = "EEHS SCHOOL ADMIN"
-admin.site.site_index_title = "Welcome To EEHS School Admin Panel"
+admin.site.site_header = "EEHSS SCHOOL ADMIN"
+admin.site.site_title = "EEHSS SCHOOL ADMIN"
+admin.site.site_index_title = "Welcome To EEHSS School Admin Panel"
