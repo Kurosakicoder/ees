@@ -49,26 +49,21 @@ Students Achievements
         <hr>
     </div>
     {% endif %}
-    <div class="container">
-        <div class="row mx-auto">
+    <div class="row">
 
-            {% for gallery in gallery.object_list %}
-            <div class="col-sm">
-                <div class="card" style="width: 20rem;">
-                    <img src="{{gallery.image.url}}" class="card-img-top zoom" width="22rem" height="300" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">{{gallery.event_name}} - {{gallery.event_date}}</h5>
-                    </div>
+        {% for gallery in gallery.object_list %}
+        <div class="col-sm">
+            <div class="card" style="width: 32rem;">
+                <img src="{{gallery.image.url}}" class="card-img-top zoom" width="32rem" height="300" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{gallery.event_name}} - {{gallery.event_date}}</h5>
                 </div>
-                <br>
             </div>
-            {% endfor %}
+            <br>
         </div>
-
-
-
-
+        {% endfor %}
     </div>
+
     <div class="mx-auto">
         {% if achievements.paginator.num_pages > 1 %}
         <hr>

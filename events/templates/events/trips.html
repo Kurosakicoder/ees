@@ -28,10 +28,10 @@
         {% for x in trips %}
         <div class="card mb-3" style="max-width: 100%;">
             <div class="row no-gutters">
-                <div class="col-md-5">
-                    <img src="{{x.image.url}}" class="card-img" alt="...">
+                <div class="col-md-6">
+                    <img src="{{x.image.url}}" class="card-img zoom" alt="...">
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-6">
                     <div class="card-body">
                         <h5 class="card-title">{{x.headerline|safe|escape}} - {{x.date}}</h5>
                         <p class="card-text">{{x.first_para|safe|escape}}</p>
