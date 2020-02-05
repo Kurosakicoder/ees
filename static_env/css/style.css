@@ -560,7 +560,7 @@ button:focus {
   height: 125%;
   bottom: 0;
   z-index: -1;
-  opacity: .6;
+  /* opacity: .; */
 }
 
 .banner_area .banner_inner .banner_content h2 {
