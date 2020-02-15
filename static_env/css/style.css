@@ -36,7 +36,7 @@ Table of Content:
 
   /* smartphones, iPhone, portrait 480x320 phones */
   .card-small {
-    width: 19rem;
+    width: 20rem;
     text-align: center;
   }
 }
@@ -45,7 +45,7 @@ Table of Content:
 
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
   .card-small {
-    width: 20rem;
+    width: 24rem;
     text-align: center;
   }
 }
@@ -54,7 +54,7 @@ Table of Content:
 
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
   .card-small {
-    width: 22rem;
+    width: 20rem;
     text-align: center;
   }
 }
@@ -63,10 +63,11 @@ Table of Content:
 
   /* tablet, landscape iPad, lo-res laptops ands desktops */
   .card-small {
-    width: 24rem;
+    width: 26rem;
     text-align: center;
   }
 }
+
 
 @media (min-width:1025px) {
 
