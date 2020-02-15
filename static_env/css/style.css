@@ -32,19 +32,11 @@ Table of Content:
 
 =====================================================================*/
 /* Custom CSS */
-
-@media only screen and (max-width: 700px) {
-  .card-small {
-    width: 20rem;
-    text-align: center;
-  }
-}
-
 @media (min-width:320px) {
 
   /* smartphones, iPhone, portrait 480x320 phones */
   .card-small {
-    width: 18rem;
+    width: 19rem;
     text-align: center;
   }
 }
@@ -53,7 +45,7 @@ Table of Content:
 
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
   .card-small {
-    width: 18rem;
+    width: 20rem;
     text-align: center;
   }
 }
@@ -62,7 +54,7 @@ Table of Content:
 
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
   .card-small {
-    width: 20rem;
+    width: 22rem;
     text-align: center;
   }
 }
