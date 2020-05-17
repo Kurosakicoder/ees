@@ -6,41 +6,66 @@
         </div>
         <div class="container">
             <div class="banner_content text-center">
-                <h2>Admissions</h2>
-                <div class="page_link">
-                    <a href="/">Home</a>
-                    <a href="{% url 'admissions:admissions' %}">Admissions</a>
+                <div style="max-width: 400px;
+                min-height: 90px;margin: 0 auto;
+                background: rgb(0, 0, 0, 0.4);">
+                    <h2 style="text-shadow: 8px 16px 16px #000; ">Admissions</h2>
+                    <div class="page_link">
+                        <a href="/">Home</a>
+                        <a href="{% url 'admissions:admissions' %}">Admissions</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<div class="jumbotron">
-    <h1 class="display-4 text-center">Admissions</h1>
+<div class="accordion container p-2" id="accordionExample">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    <p style="font-size: 18px;">Admissions for Class Nursery - Class IX</p>
+                </button>
+            </h2>
+        </div>
 
-</div>
-
-<div class="container">
-    <div class="jumbotron" style="width: 100%;">
-        <div class="card">
-            <h2 class="card-header alert alert-info">Admissions for Class Nursery - Class IX</h2>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body">
-                <p class="card-text">{{admissions.admission_lower|safe|escape }}</p>
+                {{admissions.admission_lower|safe|escape }}
             </div>
         </div>
-        <br>
-        <div class="card">
-            <h2 class="card-header alert alert-info">Admissions for Higher Secondary</h2>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="false" aria-controls="collapseTwo">
+                    <p style="font-size: 18px;">Admissions for Higher Secondary</p>
+                </button>
+            </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
             <div class="card-body">
-                <p class="card-text">{{admissions.admission_hs|safe|escape}}</p>
+                {{admissions.admission_hs|safe|escape}}
+
             </div>
         </div>
-        <br>
-        <div class="card">
-            <h2 class="card-header alert alert-info">Payment of fees</h2>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                    aria-expanded="false" aria-controls="collapseThree">
+                    <p style="font-size: 18px;">Payment of fees</p>
+                </button>
+            </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
             <div class="card-body">
-                <p class="card-text">{{admissions.fees_payment|safe|escape}}</p>
+
+                {{admissions.fees_payment|safe|escape}}
             </div>
         </div>
     </div>

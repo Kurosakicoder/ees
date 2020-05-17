@@ -1,84 +1,106 @@
 {% extends 'base.html' %}
 {% block body %}
 <section class="banner_area">
-    <div class="banner_inner d-flex align-items-center">
-        <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
-        <div class="container">
-            <div class="banner_content text-center">
-                <h2>High School</h2>
-                <div class="page_link">
-                    <a href="/">Home</a>
-                    <a href="{% url 'academics:highschool' %}">High School</a>
-                </div>
-            </div>
+  <div class="banner_inner d-flex align-items-center">
+    <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+    <div class="container">
+      <div class="banner_content text-center">
+        <div style="max-width: 400px;
+                    min-height: 90px;margin: 0 auto;
+                    background: rgb(0, 0, 0, 0.4);">
+          <h2 style="text-shadow: 8px 16px 16px #000; ">High School</h2>
+          <div class="page_link">
+            <a href="/">Home</a>
+            <a href="{% url 'academics:highschool' %}">High School</a>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
-<div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#curi">Curriculum</a>
-            </li>
-            <li class="nav-item"></li>
-                <a class="nav-link" href="#schol">Co-Scholastic Activities</a>
-            <li class="nav-item">
-                <a class="nav-link" href="#cocuri">Co-Curricular Activities</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#work">Work Experience</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#school">School Uniform</a>
-            </li>
-        </ul>
-      </nav>
-    </div> 
-<br>
-<div class="container" id="curi">
-<div class="card ">
-    <h2 class="card-header alert alert-primary text-center">Curriculum</h2>
-    <div class="card-body">
-      <p class="card-text text-justify">{{highschool.curriculum_school|safe|escape}}</p>
-      <a href="{% url 'academics:syllabus' %}" class="btn btn-primary" target="_blank">Go To School Syllabus</a>
-    </div>
-  </div>
-</div> 
-<br>
-<div class="container" id="schol">
-  <div class="card ">
-    <h2 class="card-header alert alert-info text-center">Co-Scholastic Activities</h2>
-    <div class="card-body">
-      <p class="card-text text-justify">{{highschool.coscholastic_activities|safe|escape}}</p>
-    </div>
-  </div>  
-</div>  
-<br> 
-<div class="container" id="cocuri">
-  <div class="card ">
-    <h2 class="card-header alert alert-info text-center">Co-Curricular Activities</h2>
-    <div class="card-body">
-      <p class="card-text text-justify">{{highschool.cocurricular_activities|safe|escape}}</p>
-    </div>
-  </div>
-</div>  
-<br>
-<div class="container" id="work">
-  <div class="card ">
-    <h2 class="card-header alert alert-info text-center">Work Experience</h2>
-    <div class="card-body">
-      <p class="card-text text-justify">{{highschool.work_experience|safe|escape}}</p>
-    </div>
-  </div>
-</div>
 <br>
 <div class="container" id="school">
   <div class="card ">
-    <h2 class="card-header alert alert-success text-center">School Uniform</h2>
+    <h2 class="card-header  text-center">Curriculum</h2>
     <div class="card-body">
-      <p class="card-text text-justify">{{highschool.school_uniform|safe|escape}}</p>
+      <p class="card-text"
+        style="font-weight: 300; text-align: justify; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        {{highschool.curriculum_school|safe|escape}}
+      </p>
+      <a href="{% url 'academics:syllabus' %}" class="btn btn-primary" target="_blank">Go To School Syllabus</a>
+
     </div>
   </div>
 </div>
 <br>
-{% endblock body %}
+<div class="accordion container" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+          aria-expanded="true" aria-controls="collapseOne">
+          <p style="font-size: 18px;">Co-Scholastic Activities</p>
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <p class="card-text"
+          style="font-weight: 300; text-align: justify; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+          {{highschool.coscholastic_activities|safe|escape}}
+        </p>
+
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+          aria-expanded="false" aria-controls="collapseTwo">
+          <p style="font-size: 18px;">Co-Curricular Activities</p>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        {{highschool.cocurricular_activities|safe|escape}}
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+          aria-expanded="false" aria-controls="collapseThree">
+          <p style="font-size: 18px;">Work Experience</p>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        {{highschool.work_experience|safe|escape}}
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingFour">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
+          aria-expanded="false" aria-controls="collapseFour">
+          <p style="font-size: 18px;">School Uniform</p>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+
+        {{highschool.school_uniform|safe|escape}}
+
+      </div>
+    </div>
+  </div>
+
+  <br>
+  {% endblock body %}
