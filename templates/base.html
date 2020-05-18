@@ -92,89 +92,128 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
-                            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Home</a>
+                            </li>
                             <li class="nav-item submenu dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                                    aria-haspopup="true" aria-expanded="false">About</a>
+                                    aria-haspopup="true" aria-expanded="false"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">About</a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="{% url 'aboutus:about' %}">About
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'aboutus:about' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">About
                                             us</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="{% url 'aboutus:headmistress' %}">Headmistress desk</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="{% url 'aboutus:principal' %}">Principal desk</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="{% url 'aboutus:vice_principal' %}">Vice-Principal desk</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="{% url 'aboutus:message' %}">Messages</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'aboutus:headmistress' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Headmistress
+                                            desk</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'aboutus:principal' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Principal
+                                            desk</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'aboutus:vice_principal' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Vice-Principal
+                                            desk</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'aboutus:message' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Messages</a>
+                                    </li>
 
 
                                 </ul>
                             </li>
                             <li class="nav-item submenu dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                                    aria-haspopup="true" aria-expanded="false">Academics</a>
+                                    aria-haspopup="true" aria-expanded="false"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Academics</a>
                                 <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'academics:aboutacademics' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">About
+                                            Academics</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'academics:highschool' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">High
+                                            School</a></li>
                                     <li class="nav-item"><a class="nav-link"
-                                            href="{% url 'academics:aboutacademics' %}">About Academics</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="{% url 'academics:highschool' %}">High School</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="{% url 'academics:highersecondaryschool' %}">Higher Secondary</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="{% url 'academics:schooltiming' %}">School Timing</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="{% url 'academics:schoolanthem' %}">School Anthem</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="{% url 'academics:syllabus' %}">Syllabus</a></li>
+                                            href="{% url 'academics:highersecondaryschool' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Higher
+                                            Secondary</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'academics:schooltiming' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">School
+                                            Timing</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'academics:schoolanthem' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">School
+                                            Anthem</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'academics:syllabus' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Syllabus</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="nav-item submenu dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                                    aria-haspopup="true" aria-expanded="false">Student</a>
+                                    aria-haspopup="true" aria-expanded="false"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Student</a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a class="nav-link"
-                                            href="{% url 'studentcouncil:studentcouncil' %}">Student Council</a></li>
+                                            href="{% url 'studentcouncil:studentcouncil' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Student
+                                            Council</a></li>
                                     <li class="nav-item"><a class="nav-link"
-                                            href="{% url 'achievements:allCategories' %}">Achievements</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="{% url 'ncc:ncc' %}">NCC</a></li>
+                                            href="{% url 'achievements:allCategories' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Achievements</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'ncc:ncc' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">NCC</a>
+                                    </li>
 
                                 </ul>
                             </li>
                             <li class="nav-item submenu dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                                    aria-haspopup="true" aria-expanded="false">Events</a>
+                                    aria-haspopup="true" aria-expanded="false"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Events</a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="{% url 'events:schoolassembly' %}">School Assembly</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="{% url 'events:trips' %}">Trips &
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'events:schoolassembly' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">School
+                                            Assembly</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'events:trips' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Trips
+                                            &
                                             Excursions</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="{% url 'events:upcomingevents' %}">Upcoming Events</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="{% url 'gallery:allCategories' %}">Gallery</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'events:upcomingevents' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Upcoming
+                                            Events</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'gallery:allCategories' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Gallery</a>
+                                    </li>
                                 </ul>
                             </li>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="{% url 'circular:circular' %}">Circular</a>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'circular:circular' %}"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Circular</a>
                             </li>
                             <li class="nav-item submenu dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                                    aria-haspopup="true" aria-expanded="false">Members</a>
+                                    aria-haspopup="true" aria-expanded="false"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Members</a>
                                 <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'members:members' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Members</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'missionstatement:mission' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Mission
+                                            Statement</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'forcebehind:forcebehind' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">The
+                                            Force Behind</a></li>
                                     <li class="nav-item"><a class="nav-link"
-                                            href="{% url 'members:members' %}">Members</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="{% url 'missionstatement:mission' %}">Mission Statement</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="{% url 'forcebehind:forcebehind' %}">The Force Behind</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="{% url 'infrastructure:infrastructure' %}">Infrastructure</a></li>
+                                            href="{% url 'infrastructure:infrastructure' %}"
+                                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Infrastructure</a>
+                                    </li>
                                 </ul>
-                            <li class="nav-item"><a class="nav-link"
-                                    href="{% url 'admissions:admissions' %}">Admissions</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'admissions:admissions' %}"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Admissions</a>
+                            </li>
 
-                            <li class="nav-item"><a class="nav-link" href="{% url 'contact:contact' %}">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'contact:contact' %}"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Contact</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -195,55 +234,98 @@
             <div class="row">
                 <div class="col-lg-3  col-md-6 col-sm-6">
                     <div class="single-footer-widget tp_widgets">
-                        <h6 class="footer_title">Quick Links</h6>
+                        <h6 class="footer_title"
+                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                            Quick Links</h6>
                         <ul class="list">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="{% url 'aboutus:about' %}">About us</a></li>
-                            <li><a href="{% url 'members:members' %}">Members</a></li>
-                            <li><a href="{% url 'studentcouncil:studentcouncil' %}">Student Council</a></li>
-                            <li><a href="{% url 'ncc:ncc' %}">NCC</a></li>
+                            <li><a href="/"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Home</a>
+                            </li>
+                            <li><a href="{% url 'aboutus:about' %}"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">About
+                                    us</a></li>
+                            <li><a href="{% url 'members:members' %}"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Members</a>
+                            </li>
+                            <li><a href="{% url 'studentcouncil:studentcouncil' %}"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Student
+                                    Council</a></li>
+                            <li><a href="{% url 'ncc:ncc' %}"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">NCC</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3  col-md-6 col-sm-6">
                     <div class="single-footer-widget tp_widgets">
-                        <h6 class="footer_title">Academics</h6>
+                        <h6 class="footer_title"
+                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                            Academics</h6>
                         <ul class="list">
-                            <li><a href="{% url 'academics:aboutacademics' %}"> About Academics</a></li>
-                            <li><a href="{% url 'academics:highschool' %}">High School</a></li>
-                            <li><a href="{% url 'academics:highersecondaryschool' %}">Higher Secondary</a></li>
-                            <li><a href="{% url 'academics:schooltiming' %}">School timing</a></li>
-                            <li><a href="{% url 'academics:syllabus' %}">Syllabus</a></li>
+                            <li><a href="{% url 'academics:aboutacademics' %}"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                                    About Academics</a></li>
+                            <li><a href="{% url 'academics:highschool' %}"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">High
+                                    School</a></li>
+                            <li><a href="{% url 'academics:highersecondaryschool' %}"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Higher
+                                    Secondary</a></li>
+                            <li><a href="{% url 'academics:schooltiming' %}"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">School
+                                    timing</a></li>
+                            <li><a href="{% url 'academics:syllabus' %}"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Syllabus</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3  col-md-6 col-sm-6">
                     <div class="single-footer-widget tp_widgets">
-                        <h6 class="footer_title">Events</h6>
+                        <h6 class="footer_title"
+                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                            Events</h6>
                         <ul class="list">
-                            <li><a href="{% url 'circular:circular' %}">Circular</a></li>
-                            <li><a href="{% url 'events:schoolassembly' %}">School Assembly</a></li>
-                            <li><a href="{% url 'events:trips' %}">Trips & Excursions</a></li>
-                            <li><a href="{% url 'events:upcomingevents' %}">Upcoming Events</a></li>
-                            <li><a href="{% url 'achievements:allCategories' %}">Achievements</a></li>
+                            <li><a href="{% url 'circular:circular' %}"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Circular</a>
+                            </li>
+                            <li><a href="{% url 'events:schoolassembly' %}"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">School
+                                    Assembly</a></li>
+                            <li><a href="{% url 'events:trips' %}"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Trips
+                                    & Excursions</a></li>
+                            <li><a href="{% url 'events:upcomingevents' %}"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Upcoming
+                                    Events</a></li>
+                            <li><a href="{% url 'achievements:allCategories' %}"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Achievements</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3  col-md-6 col-sm-6">
                     <div class="single-footer-widget tp_widgets">
-                        <h6 class="footer_title">Contact</h6>
+                        <h6 class="footer_title"
+                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                            Contact</h6>
                         <ul class="list">
-                            <li><a href="{% url 'contact:contact' %}">Contact Page</a></li>
-                            <li><a href="{% url 'admissions:admissions' %}">Admissions</a></li>
+                            <li><a href="{% url 'contact:contact' %}"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Contact
+                                    Page</a></li>
+                            <li><a href="{% url 'admissions:admissions' %}"
+                                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Admissions</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="row footer-bottom d-flex justify-content-between align-items-center">
-                <p class="col-lg-8 col-md-8 footer-text m-0">
+                <p class="col-lg-8 col-md-8 footer-text m-0"
+                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
                     Copyright &copy;
-                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This website is
-                    made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#"
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved |
+                    Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#"
                         target="_blank">Kurosaki</a></p>
                 <div class="col-lg-4 col-md-4 footer-social">
                     <a href="#"><i class="fa fa-facebook"></i></a>
