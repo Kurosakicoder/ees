@@ -27,13 +27,17 @@
     </div>
     {% if category %}
     <div>
-        <h1 class="text-center my_title">Circular {{category.category_year}}</h1>
+        <h1 class="text-center my_title"
+            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            Circular {{category.category_year}}</h1>
         <hr>
     </div>
     {% else %}
     <br>
     <div>
-        <h1 class="text-center my_title">Circulars</h1>
+        <h1 class="text-center my_title"
+            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            Circulars</h1>
         <hr>
     </div>
     {% endif %}
@@ -42,18 +46,30 @@
             <table class="table table-hover table-bordered">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col">Circular Date</th>
-                        <th scope="col">Circular Notice</th>
-                        <th scope="col">Circular Details</th>
+                        <th scope="col"
+                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                            Circular Date</th>
+                        <th scope="col"
+                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                            Circular Notice</th>
+                        <th scope="col"
+                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                            Circular Details</th>
                     </tr>
                 </thead>
                 {% for circular in circular.object_list %}
 
                 <tbody>
                     <tr>
-                        <th scope="row">{{circular.date}}</th>
-                        <td>{{circular.circular_notice|safe|escape}}</td>
-                        <td>{{circular.circular_details_two|safe|escape}}</td>
+                        <th scope="row"
+                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                            {{circular.date}}</th>
+                        <td
+                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                            {{circular.circular_notice|safe|escape}}</td>
+                        <td
+                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                            {{circular.circular_details_two|safe|escape}}</td>
                     </tr>
 
 

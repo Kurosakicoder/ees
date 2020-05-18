@@ -24,7 +24,9 @@
 
 <div class="p-3" style="background-color: rgba(0,0,0,0.04);">
     <div class="container">
-        <h2 style="text-align: center; font-weight: 500; font-size: 52px;">Student Council Members</h2>
+        <h2
+            style="text-align: center; font-weight: 500; font-size: 52px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            Student Council Members</h2>
     </div>
 </div>
 
@@ -34,20 +36,36 @@
         <table class="table table-hover table-bordered">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">Sl No.</th>
-                    <th scope="col">Post</th>
-                    <th scope="col">Student Name</th>
-                    <th scope="col">Duration</th>
+                    <th scope="col"
+                        style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                        Sl No.</th>
+                    <th scope="col"
+                        style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                        Post</th>
+                    <th scope="col"
+                        style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                        Student Name</th>
+                    <th scope="col"
+                        style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                        Duration</th>
 
                 </tr>
             </thead>
             {% for x in studentcouncil %}
             <tbody>
                 <tr>
-                    <th scope="row">{{x.id}}</th>
-                    <td>{{x.post}}</td>
-                    <td>{{x.student_name}}</td>
-                    <td>{{x.start_date}} - {{x.end_date}}</td>
+                    <th scope="row"
+                        style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                        {{x.id}}</th>
+                    <td
+                        style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                        {{x.post}}</td>
+                    <td
+                        style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                        {{x.student_name}}</td>
+                    <td
+                        style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                        {{x.start_date}} - {{x.end_date}}</td>
                 </tr>
 
             </tbody>
