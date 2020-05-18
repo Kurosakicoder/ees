@@ -23,7 +23,9 @@
 
 <div class="p-3" style="background-color: rgba(0,0,0,0.04);">
     <div class="container">
-        <h2 style="text-align: center; font-weight: 500; font-size: 52px;">Trips & Excursions by School members</h2>
+        <h2
+            style="text-align: center; font-weight: 500; font-size: 52px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            Trips & Excursions by School members</h2>
     </div>
 </div>
 
@@ -38,9 +40,15 @@
                 </div>
                 <div class="col-md-6">
                     <div class="card-body">
-                        <h5 class="card-title">{{x.headerline|safe|escape}} - {{x.date}}</h5>
-                        <p class="card-text">{{x.first_para|safe|escape}}</p>
-                        <p class="card-text">{{x.second_para|safe|escape}}</p>
+                        <h5 class="card-title"
+                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                            {{x.headerline|safe|escape}} - {{x.date}}</h5>
+                        <p class="card-text"
+                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                            {{x.first_para|safe|escape}}</p>
+                        <p class="card-text"
+                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                            {{x.second_para|safe|escape}}</p>
                     </div>
                 </div>
             </div>

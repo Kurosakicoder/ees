@@ -23,7 +23,9 @@
 
 <div class="p-3" style="background-color: rgba(0,0,0,0.04);">
     <div class="container">
-        <h2 style="text-align: center; font-weight: 500; font-size: 52px;">Messages From Board Members</h2>
+        <h2
+            style="text-align: center; font-weight: 500; font-size: 52px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            Messages From Board Members</h2>
 
     </div>
 </div>
@@ -36,8 +38,12 @@
                 <div class="card" style="width: 22rem;">
                     <img src="{{x.image.url}}" class="card-img-top" alt="..">
                     <div class="card-body">
-                        <h4 class="card-title">{{x.name}}</h4>
-                        <p class="card-text text-justify">{{x.paragraph|safe|escape}}</p>
+                        <h4 class="card-title"
+                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                            {{x.name}}</h4>
+                        <p class="card-text"
+                            style="font-weight: 300; text-align: justify; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                            {{x.paragraph|safe|escape}}</p>
                     </div>
                 </div>
                 <br>

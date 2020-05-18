@@ -35,7 +35,9 @@
         </div>
         <div class="card-body">
             <blockquote class="blockquote mb-0">
-                <p>Train up a child in the way he should go, And when he is old he will not depart from it.</p>
+                <p
+                    style="font-weight: 300; text-align: justify; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    Train up a child in the way he should go, And when he is old he will not depart from it.</p>
                 <footer class="blockquote-footer">Proverbs 22:6 <cite title="Source Title">Bible</cite></footer>
             </blockquote>
         </div>
@@ -54,10 +56,14 @@
         <div class="col-lg-6">
             <div class="card" style="flex: 1; ">
                 <div class="card-body">
-                    <h2 class="card-title" style="color: black;">{{about_home.header_school|safe|escape}}</h2>
+                    <h2 class="card-title"
+                        style="color: black; text-align: justify; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                        {{about_home.header_school|safe|escape}}</h2>
                     <br>
-                    <p class="card-text">{{about_home.about_school|safe|escape}}</p>
-                    <a class="main_btn" href="{% url 'contact:contact' %}">Contact us</a>
+                    <p class="card-text"
+                        style="font-weight: 300; text-align: justify; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                        {{about_home.about_school|safe|escape}}</p>
+                    <!-- <a class="main_btn" href="{% url 'contact:contact' %}">Contact us</a> -->
                 </div>
             </div>
 
@@ -67,15 +73,21 @@
 <section class="about_area p_120">
     <div class="container">
         <div class="card text-center">
-            <div class="card-header">
+            <div class="card-header"
+                style=" font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
                 Upcoming Events
             </div>
             {% for x in upcomingevents_home %}
             <div class="card-body">
-                <h4 class="card-title">{{x.headerline|safe|escape}}</h4>
-                <p class="card-text">{{x.program_notice|safe|escape}}</p>
+                <h4 class="card-title"
+                    style=" font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    {{x.headerline|safe|escape}}</h4>
+                <p class="card-text"
+                    style=" font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    {{x.program_notice|safe|escape}}</p>
             </div>
-            <div class="card-footer text-muted">
+            <div class="card-footer text-muted"
+                style=" font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
                 Program on {{x.date}}
             </div>
             {% endfor%}

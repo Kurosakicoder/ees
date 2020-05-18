@@ -35,7 +35,9 @@
             <div class="card" style="width: 18rem;">
                 <img src="{{x.image.url}}" class="card-img-top" alt="...">
                 <div class="card-body bg-light">
-                    <h5 class="card-title">{{x.name|safe|escape}}, {{x.post|safe|escape}}</h5>
+                    <h5 class="card-title"
+                        style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                        {{x.name|safe|escape}} - {{x.post|safe|escape}}</h5>
                 </div>
             </div>
             <br>

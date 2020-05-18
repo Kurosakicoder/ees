@@ -24,15 +24,21 @@
 <section class="about_area p_120">
     <div class="container">
         <div class="card text-center">
-            <div class="card-header">
+            <div class="card-header"
+                styel="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
                 Featured
             </div>
             {% for x in upcomingevents %}
             <div class="card-body">
-                <h4 class="card-title ">{{x.headerline|safe|escape}}</h4>
-                <p class="card-text">{{x.program_notice|safe|escape}}</p>
+                <h4 class="card-title "
+                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    {{x.headerline|safe|escape}}</h4>
+                <p class="card-text"
+                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    {{x.program_notice|safe|escape}}</p>
             </div>
-            <div class="card-footer text-muted">
+            <div class="card-footer text-muted"
+                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
                 Program on {{x.date}}
             </div>
             {% endfor%}
