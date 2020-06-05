@@ -26,7 +26,7 @@ SECRET_KEY = 'cgz10y3m&rzrdrlc8nzod_l!$zcn0n0m841$rxw4*ded3t=169'
 DEBUG = False
 
 ALLOWED_HOSTS = ['ees.ac.in','68.183.85.30', 'www.ees.ac.in', 'localhost']
-
+# ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -90,7 +90,12 @@ WSGI_APPLICATION = 'ees.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 # if DEBUG:
 #     DATABASES = {
 #         'default': {
@@ -108,7 +113,7 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '',
     }
-}    
+}
 
 # DATABASES = {
 #     'default': {
